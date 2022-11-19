@@ -110,7 +110,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 ol ol,
@@ -164,7 +164,7 @@ a {
   background-color: transparent;
 }
 a:hover {
-  color: yellowgreen;
+  color: blue;
   text-decoration: underline;
 }
 
@@ -187,7 +187,7 @@ samp {
 
 pre {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   overflow: auto;
   -ms-overflow-style: scrollbar;
 }
@@ -212,7 +212,7 @@ table {
 
 caption {
   padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
   color: #6c757d;
   text-align: left;
   caption-side: bottom;
@@ -338,7 +338,22 @@ progress {
 
 ::-webkit-file-upload-button {
   font: inherit;
-  -webkit-appearance: button;
+  -webkit-appearance: <style>
+  .button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button1 {background-color: #4CAF50;} /* Green */
+  .button2 {background-color: #008CBA;} /* Blue */
+  </style>;
 }
 
 output {
@@ -422,7 +437,7 @@ h6, .h6 {
 
 hr {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -7538,7 +7553,7 @@ button.bg-dark:focus {
 
 .mb-2,
 .my-2 {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0 !important;
 }
 
 .ml-2,
@@ -7610,7 +7625,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 0rem !important;
 }
 
 .ml-5,
@@ -10038,7 +10053,7 @@ p.lead {
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;
-    padding: 0.5rem;
+    padding: 0.05rem;
   }
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
@@ -10089,13 +10104,16 @@ p.lead {
 section.resume-section {
   display: flex;
   align-items: center;
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-right: 1rem;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   max-width: 75rem;
 }
-section.resume-section .resume-section-content {
+section.resume-section .resume-section-content {@media (min-width: 768px) {
+  section.resume-section {
+    min-height: 20vh;
+  }
   width: 100%;
 }
 
@@ -10108,7 +10126,7 @@ section.resume-section .resume-section-content {
   section.resume-section {
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
 }
